@@ -1,5 +1,4 @@
 streamlit==1.31.1
-streamlit-audio-recorder==0.0.8
 langchain==0.1.8
 langchain-community==0.0.16
 google-generativeai==0.3.1
