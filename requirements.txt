@@ -10,3 +10,4 @@ faiss-cpu==1.7.4
 huggingface-hub==0.19.4
 sentence-transformers==2.2.2
 python-dotenv==1.0.0
+streamlit-mic-recorder
