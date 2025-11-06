@@ -26,76 +26,115 @@ genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 # ==============================
 st.markdown("""
 <style>
+<style>
+/* Ocultar elementos del sistema */
 #MainMenu {visibility: hidden;}
 footer {visibility: hidden;}
 header {visibility: hidden;}
 
+/* Fondo principal: suave y profesional */
 .main {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f0f4ff 0%, #d9e4ff 100%);
+    font-family: 'Segoe UI', sans-serif;
 }
 
+/* Contenedor del título */
 .title-container {
     background: white;
     padding: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
     text-align: center;
 }
 
 .title-container h1 {
-    color: #667eea;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.8rem;
     margin: 0;
-    font-size: 2.5rem;
 }
 
 .title-container p {
-    color: #666;
-    margin: 0.5rem 0 0 0;
+    color: #555;
+    margin-top: 0.5rem;
     font-size: 1.1rem;
 }
 
+/* Caja de entrada del chat */
 .stChatFloatingInputContainer {
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
+/* Mensajes del chat */
 [data-testid="stChatMessageContainer"] {
     background: white;
-    border-radius: 15px;
+    border-radius: 20px;
     padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     margin-bottom: 1rem;
     min-height: 500px;
     max-height: 600px;
     overflow-y: auto;
 }
 
+/* Texto del usuario */
+[data-testid="stChatMessageContainer"] p {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Botones */
 .stButton > button {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #667eea, #764ba2);
     color: white;
     border: none;
-    border-radius: 25px;
-    padding: 0.5rem 2rem;
-    font-weight: bold;
-    transition: transform 0.2s;
+    border-radius: 30px;
+    padding: 0.6rem 2rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 10px rgba(118, 75, 162, 0.3);
 }
 
 .stButton > button:hover {
     transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(118, 75, 162, 0.4);
 }
 
+/* Entradas de texto */
 .stTextInput > div > div > input {
-    border-radius: 25px;
+    border-radius: 30px;
     border: 2px solid #667eea;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
 }
 
+/* Expanders */
 .streamlit-expanderHeader {
-    background-color: #f0f2f6;
+    background-color: #eef1fb;
     border-radius: 10px;
     font-weight: 600;
+    color: #333;
+}
+
+/* Scrollbar personalizado */
+[data-testid="stChatMessageContainer"]::-webkit-scrollbar {
+    width: 10px;
+}
+
+[data-testid="stChatMessageContainer"]::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 10px;
+}
+
+[data-testid="stChatMessageContainer"]::-webkit-scrollbar-track {
+    background: #f1f1f1;
 }
 </style>
 """, unsafe_allow_html=True)
