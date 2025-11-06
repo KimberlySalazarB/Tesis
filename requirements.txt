@@ -1,8 +1,8 @@
 streamlit==1.31.1
 langchain==0.1.8
-langchain-community==0.0.16
+langchain-community==0.0.21
 google-generativeai==0.3.1
-whisper-openai==20231114
+openai-whisper
 torch==2.1.1
 numpy==1.24.3
 faiss-cpu==1.7.4
@@ -10,3 +10,4 @@ huggingface-hub==0.19.4
 sentence-transformers==2.2.2
 python-dotenv==1.0.0
 streamlit-mic-recorder
+
