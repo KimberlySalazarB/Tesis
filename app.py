@@ -153,7 +153,7 @@ def cargar_vectorstore_desde_archivos():
 # ==============================
 @st.cache_resource
 def cargar_whisper():
-    return whisper.load_model("base", device="cpu")
+    return whisper.load_model("small", device="cpu")
 
 def buscar_contexto(consulta: str, k: int = 5):
     resultados = vectorstore.similarity_search_with_score(consulta, k=k)
