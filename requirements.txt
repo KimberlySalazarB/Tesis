@@ -12,6 +12,7 @@ python-dotenv==1.0.0
 streamlit-mic-recorder
 audio-recorder-streamlit
 setuptools
+openai
 
 
 
