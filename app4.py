@@ -132,7 +132,6 @@ def cargar_vectorstore_desde_archivos():
             model="text-embedding-3-large",
             dimensions=1024
         )
-        print(f"✅ Embedding generado")
         return resp.data[0].embedding
 
     vectorstore = FAISS(
@@ -366,5 +365,6 @@ if len(st.session_state.messages) > 1:
         st.session_state.audio_processed = None
         st.session_state.pending_audio = None
         st.rerun()
+
 
 
