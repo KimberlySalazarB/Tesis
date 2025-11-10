@@ -129,7 +129,7 @@ def cargar_vectorstore_desde_archivos():
     def embed_query(texto: str):
         resp = openai_client.embeddings.create(
             input=texto,
-            model="text-embedding-3-large"
+            model="text-embedding-3-large",
             dimensions=1024
         )
         return resp.data[0].embedding
@@ -365,3 +365,4 @@ if len(st.session_state.messages) > 1:
         st.session_state.audio_processed = None
         st.session_state.pending_audio = None
         st.rerun()
+
